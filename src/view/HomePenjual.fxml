@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: #293462;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PenjualController">
+   <children>
+      <HBox alignment="CENTER" layoutX="100.0" layoutY="164.0" prefHeight="81.0" prefWidth="400.0" spacing="100.0">
+         <children>
+            <Button fx:id="showMakananBtn" mnemonicParsing="false" onAction="#showMakanan" style="-fx-font-size: 24; -fx-background-color: #EC9B3B; -fx-text-fill: white;" text="Show Menu" />
+         </children>
+      </HBox>
+      <Label layoutX="100.0" layoutY="31.0" text="Selamat Datang" textFill="#f7d716">
+         <font>
+            <Font name="Freestyle Script" size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="100.0" layoutY="110.0" text="Tambah, hapus, ganti harga menu bisa banget" textFill="#f7d716">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="tambahBtn" layoutX="352.0" layoutY="469.0" maxHeight="30.0" maxWidth="150.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#tambahHandler" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: #EC9B3B; -fx-text-fill: white;" text="Tambah/Ganti Menu" />
+      <Label layoutX="100.0" layoutY="137.0" text="Kalo mau ganti harga, input nama yang sama" textFill="#f7d716">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ScrollPane layoutX="97.0" layoutY="246.0" maxHeight="200.0" prefHeight="200.0" prefWidth="405.0" style="-fx-border-color: #EC9B3B;">
+         <content>
+            <GridPane fx:id="makananGP" prefWidth="400.0" style="-fx-background-color: lightgrey;">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="30.4" minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label text="Menu" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                  <Label text="Harga" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </GridPane>
+         </content>
+      </ScrollPane>
+      <TextField fx:id="hapusTf" layoutX="90.0" layoutY="528.0" prefHeight="26.0" prefWidth="101.0" />
+      <Label layoutX="90.0" layoutY="500.0" text="Mau hapus input menu disini" textFill="#f7d716" />
+      <Button fx:id="simpanBtn" layoutX="352.0" layoutY="525.0" mnemonicParsing="false" onAction="#simpanHandler" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: #EC9B3B; -fx-text-fill: white;" text="Simpan Perubahan" />
+      <Button fx:id="hapus" layoutX="211.0" layoutY="528.0" mnemonicParsing="false" onAction="#hapusHandler" style="-fx-background-color: #EC9B3B; -fx-text-fill: white;" text="Hapus Menu" />
+      <Label fx:id="hapusLabel" layoutX="90.0" layoutY="568.0" text="Menu berhasil dihapus" textFill="#f7d716" visible="false" />
+   </children>
+</AnchorPane>

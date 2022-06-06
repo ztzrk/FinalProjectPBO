@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: #293462;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PembeliController">
+   <children>
+      <HBox alignment="CENTER" layoutX="100.0" layoutY="211.0" prefHeight="77.0" prefWidth="400.0" spacing="100.0">
+         <children>
+            <Button fx:id="makanan" mnemonicParsing="false" onAction="#showMenu" style="-fx-font-size: 24; -fx-background-color: #EC9B3B; -fx-text-fill: white;" text="Show Menu" />
+         </children>
+      </HBox>
+      <Label layoutX="101.0" layoutY="14.0" text="Selamat Datang" textFill="#f7d716">
+         <font>
+            <Font name="Freestyle Script" size="36.0" />
+         </font>
+      </Label>
+      <HBox layoutX="100.0" layoutY="62.0" />
+      <Label layoutX="100.0" layoutY="183.0" text="Mau Pesan Apa???" textFill="#f7d716">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="pesan" layoutX="434.0" layoutY="540.0" mnemonicParsing="false" onAction="#pesanHandler" prefWidth="75.0" style="-fx-background-color: #EC9B3B; -fx-text-fill: white;" text="Pesan" />
+      <ScrollPane fx:id="homePembeli" fitToWidth="true" layoutX="92.0" layoutY="288.0" minViewportWidth="400.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #EC9B3B; -fx-border-color: #EC9B3B;">
+         <content>
+            <GridPane fx:id="menu" alignment="CENTER_LEFT" prefWidth="400.0" style="-fx-background-color: lightgrey;">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints valignment="CENTER" vgrow="SOMETIMES" />
+                  <RowConstraints vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="31.19998779296875" vgrow="SOMETIMES" />
+                  <RowConstraints vgrow="SOMETIMES" />
+                  <RowConstraints vgrow="SOMETIMES" />
+                  <RowConstraints vgrow="SOMETIMES" />
+                  <RowConstraints vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label text="Menu" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                  <Label text="Harga" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                  <Label text="Jumlah" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </GridPane>
+         </content>
+      </ScrollPane>
+      <Button fx:id="showSaldo" layoutX="162.0" layoutY="67.0" mnemonicParsing="false" onAction="#showSaldoHandler" prefWidth="75.0" style="-fx-background-color: #EC9B3B; -fx-text-fill: white;" text="Lihat Saldo" />
+      <Button fx:id="topUp" layoutX="162.0" layoutY="99.0" maxWidth="75.0" mnemonicParsing="false" onAction="#topUp" prefWidth="75.0" style="-fx-background-color: #EC9B3B; -fx-text-fill: white;" text="Top Up" />
+      <Label layoutX="100.0" layoutY="69.0" text="Saldo Zpay " textFill="#f7d716" />
+      <Label fx:id="Zpay" layoutX="161.0" layoutY="69.0" maxHeight="17.6" style="-fx-background-color: black; -fx-text-fill: white;" />
+   </children>
+</AnchorPane>

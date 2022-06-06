@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Ellipse?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: #293462;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PembeliController">
+   <children>
+      <Circle fill="#f24c4c" layoutX="320.0" layoutY="420.0" radius="100.0" stroke="BLACK" strokeType="INSIDE" />
+      <Ellipse fill="#ff1f1f" layoutX="20.0" layoutY="57.0" radiusX="167.0" radiusY="134.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: #F24C4C;" />
+      <Label layoutX="179.0" layoutY="125.0" text="Daftar Pembeli" textFill="#f7d716">
+         <font>
+            <Font name="Freestyle Script" size="64.0" />
+         </font>
+      </Label>
+      <GridPane layoutX="179.0" layoutY="263.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label text="Username" textFill="#f7d716" />
+            <Label text="Password" textFill="#f7d716" GridPane.rowIndex="1" />
+            <TextField fx:id="usernameDaftar" GridPane.columnIndex="1" />
+            <TextField fx:id="passwordDaftar" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+      <Button fx:id="daftar" layoutX="269.0" layoutY="354.0" mnemonicParsing="false" onAction="#daftarHandler" prefHeight="30.0" prefWidth="75.0" style="-fx-background-color: #EC9B3B; -fx-text-fill: white;" text="Daftar" />
+      <Label fx:id="wrongDaftar" layoutX="286.0" layoutY="415.0" />
+   </children>
+</AnchorPane>
